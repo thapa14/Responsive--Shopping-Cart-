@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.product_img img{
+    /* min-width: 20rem; */
+    max-height: 20rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.product_name{
+    font-size: 2.4rem;
+}
+
+input{
+    width: 3rem;
+}
+#error_tre{
+    font-size: 1.2rem;
+}
+.discount_code a{
+    cursor: pointer;
+    
+}
+.hide{
+    display: none !important; 
+}
+.color {
+    color: rgb(237 0 0);
+}
+
+.page-link:focus{
+    box-shadow: none;
+}
+
+.discountCode{
+    font-size: 1.2rem;
+}
