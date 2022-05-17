@@ -86,7 +86,6 @@ const decreaseNumber = (IncDec, priceinc, productName) => {
         productTotalAmount -= products?.price;
         product_total_amt.innerText = productTotalAmount;
         totalAmount = applyShippingCharges(totalAmount, quantity.value);
-        console.log(totalAmount);
 
         totalAmount += productTotalAmount;
         if (couponApplied) {
