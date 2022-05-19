@@ -25,10 +25,16 @@ const applyShippingCharges = (totalAmount, quantity) => {
     if (productTotalAmount || quantity != '0') {
         totalAmount = 50;
         shipping_charge.innerText = `${totalAmount}`;
+        // discount.classList.remove('hide');
+
         return totalAmount;
     } else {
         totalAmount = 0;
         shipping_charge.innerText = `${totalAmount}`;
+        // window.alert("Discount can't be added to 0 quantiy");
+        // discount.classList.add('hide');
+        // document.getElementById('discountAmount').innerText = 0;
+
         return totalAmount;
     }
 
@@ -146,4 +152,24 @@ const dicountCode = () => {
 const promotionAreaToggle = () => {
     let promotionArea = document.getElementById("collapseExample");
     promotionArea.classList.toggle('d-none');
+}
+
+const addToWishlist = (id) => {
+    document.getElementById(id).classList.toggle('addToWishlist');
+}
+
+const removeItem = (removeItemId,itemTotalValue) => {
+    document.getElementById(removeItemId).classList.add('hide');
+    
+    let productTotalAmount = parseInt(product_total_amt.innerText);
+    let quantity = parseInt(document.getElementById(itemTotalValue).innerText);
+    let totalCartAmount = parseInt(total_cart_amt.innerText);
+    productTotalAmount -= quantity;
+    totalCartAmount -=quantity;
+    product_total_amt.innerText = productTotalAmount;
+    total_cart_amt.innerText = totalCartAmount;
+
+    window.alert(`item removed`);
+
+
 }
